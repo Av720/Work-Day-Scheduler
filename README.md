@@ -1,3 +1,9 @@
+WEBLINK TO THE WEBSITE: https://av720.github.io/Work-Day-Scheduler/
+
+SCREENSHOT: ![Screenshot 2023-02-18 215522](https://user-images.githubusercontent.com/120581801/219923089-92a7baf4-992c-42c1-8823-3e1a9183eb2a.png)
+
+
+
 # 05 Third-Party APIs: Work Day Scheduler
 
 ## Your Task
