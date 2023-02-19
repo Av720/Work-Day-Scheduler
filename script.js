@@ -27,8 +27,9 @@ console.log(currentHour)
 
 $(".time-block").each(function () {
   var calendarHour = $(this).attr("id").split("-")[1];
-  console.log(calendarHour)
+
   // console.log(calendarHour)
+
   //create and if and else for the past present and future time blocks
   if (currentHour == calendarHour) {
     $(this).addClass("present");
@@ -57,7 +58,29 @@ $(".saveBtn").click(function () {
   localStorage.setItem(localTime, localPlan);
 });
 
-//------------------------------------------------------------------------
+//-----------------------------------------------------------------------
+
+var saveBtn = $(".saveBtn");
+
+
+// //   //create a function so that when the page refreshes , the data will save 
+
+function saveOnRefresh() {
+
+  $(".hour").each(function () {
+
+    var currentHour = $(this).text();
+    var currentMeeting = localStorage.getItem(currentHour);
+
+    console.log(this);
+    console.log(currentHour);
+
+    if (currentMeeting !== null) {
+      $(this).siblings(".description").val(currentMeeting);
+    }
+
+  });
+}
 
 
 
