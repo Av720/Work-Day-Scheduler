@@ -1,7 +1,7 @@
 body {
   font-family: 'Courier New', Courier, monospace;
   font-size: 16px;
-  background-color: rgb(155, 131, 131);
+  background-color: rgb(152, 202, 222);
   font-weight: bold;
 }
 
@@ -22,7 +22,7 @@ header p #currentday {
 
 .display-3, .lead { 
   font-weight: bold;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .description {
