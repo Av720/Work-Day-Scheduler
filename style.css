@@ -20,7 +20,8 @@ header p #currentday {
   border: 4px outset gray;
 }
 
-.display-3, .lead { 
+.display-3,
+.lead {
   font-weight: bold;
   color: rgb(0, 0, 0);
 }

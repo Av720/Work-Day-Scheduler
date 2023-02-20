@@ -25,27 +25,30 @@ console.log(today)
 //create a function to tell the past present or future times on the calendar
 
 // this function will tell the current time using momemt
-var currentHour = moment().format("HH");
-// console.log(currentHour)
+var currentHour = moment().hour();
+console.log(currentHour)
 
 // traverse the DOM
 $(".time-block").each(function () {
-  var calendarHour = $(this).attr("id").split("-")[1];
+  var calendarHour = parseInt($(this).attr("id").split("hour")[1]);
 
-  // console.log(calendarHour) = works
+  console.log(calendarHour)
 
   //create and if and else for the past present and future time blocks, this will change the colors according to the current hour present 
-  if (currentHour == calendarHour) {
-    $(this).addClass("present");
-    $(this).children(".description").addClass("present");
-
-  } else if (currentHour < calendarHour) {
-    $(this).removeClass("present");
-    $(this).addClass("future");
-
-  } else if (currentHour > calendarHour) {
-    $(this).removeClass("future");
+  if (calendarHour < currentHour) {
     $(this).addClass("past");
+    $(this).removeClass("future");
+    $(this).removeClass("present");
+  }
+  else if (calendarHour === currentHour) {
+    $(this).removeClass("past");
+    $(this).removeClass("future");
+    $(this).addClass("present");
+  }
+  else {
+    $(this).removeClass("present");
+    $(this).removeClass("past");
+    $(this).addClass("future");
   }
 });
 
